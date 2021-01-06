@@ -1,0 +1,5 @@
+a=int(input("сторона a= "))
+b=int(input("сторона b= "))
+p=(a*2+b*2)
+s=(a*b)
+print("p=",p,"s=",s)

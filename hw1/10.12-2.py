@@ -1,0 +1,7 @@
+a=int(input("a= "))
+b=int(input("b= "))
+c=int(input("c= "))
+d=int(input("d= "))
+x=(a+b)
+y=(c+d)
+print(x/y)
