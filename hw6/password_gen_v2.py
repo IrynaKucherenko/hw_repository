@@ -31,6 +31,7 @@ def main():
             return pas_light()
         else:
             hw.write(pas)
+            hw.close()
 
     elif a == "2":
         pas = pas_medium()
@@ -41,6 +42,7 @@ def main():
             return pas_medium()
         else:
             hw.write(pas)
+            hw.close()
 
     elif a == "3":
         pas = pas_hard()
@@ -51,6 +53,7 @@ def main():
             return pas_hard()
         else:
             hw.write(pas)
+            hw.close()
 
     elif a == "4":
         pas = pas_complex()
@@ -61,6 +64,7 @@ def main():
             return pas_complex()
         else:
             hw.write(pas)
+            hw.close()
 
     elif a == "5":
         return None
