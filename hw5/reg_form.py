@@ -73,7 +73,7 @@ def mail():
 
 
 def pas():
-    password = input("pass_: ")
+    password = input("The password must contain a minimum of\n 1 upper case letters,\n 1 lower case,\n 1 digit\nPass: ")
 
     if len(password) < 8:
         print("less then 8 sings")
@@ -103,7 +103,8 @@ def pas():
         return pas()
 
 
-main()
+if __name__ == '__main__':
+    main()
 
 
 
