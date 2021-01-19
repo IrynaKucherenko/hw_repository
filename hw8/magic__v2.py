@@ -42,7 +42,7 @@ def main():
     name = input("name: ").title()
     if players.get(name) is None:
         p = {name: {"games": 0, "avg_attempts": 0, "record": 0}}
-        players[name] = {"games": 0, "total_attempts": 0, "avg_attempts": 0, "record": 1000}
+        players[name] = {"games": 0, "total_attempts": 0, "avg_attempts": 0, "record": 1000000}
 
     games = get_magic([])
     update(games, players[name])
@@ -54,7 +54,7 @@ def main():
 
 
 def get_magic(games):
-    random_number = random.randint(1, 5)
+    random_number = random.randint(1, 100)
     counter_try = 0
     while True:
         try:
