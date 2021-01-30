@@ -26,18 +26,26 @@
 
 
 def main():
-    list_grade_students = []
-    number = int(input("Введите количество студентов: "))
-    for i in range(number):
-        i = str(input("Введите фамилию и балл: ")).split()
-        name_gr = list(i)
-        name = (name_gr[0]).title()
-        grade = int(name_gr[1])
-        name_grate = {"фамилия": name, "балл": grade}
-        list_grade_students.append(name_grate)
-        my_list = (sorted(list_grade_students, key=lambda data: data["балл"], reverse=True))
-    for i in my_list:
-        print(i.get("фамилия"))
+    try:
+        list_grade_students = []
+        number = int(input("Введите количество студентов: "))
+        for i in range(number):
+            i = str(input("Введите фамилию и балл: ")).split()
+            name_gr = list(i)
+            name = (name_gr[0]).title()
+            grade = int(name_gr[1])
+            name_grate = {"фамилия": name, "балл": grade}
+            list_grade_students.append(name_grate)
+            my_list = (sorted(list_grade_students, key=lambda data: data["балл"], reverse=True))
+        c = 0
+        for i in my_list:
+            c += 1
+            print(f"{c}.", i.get("фамилия"))
+    except ValueError:
+        print("Invalid format. Enter the number")
+        return main()
+
+
 
 
 if __name__ == '__main__':
